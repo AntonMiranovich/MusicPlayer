@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+body {
+  width: 1200px;
+  background-color: #ede5cd;
+  display: flex;
+  justify-content: center;
+  margin: 240px auto;
+  align-items: center;
+}
+
+.wrapper {
+  width: 540px;
+  height: 169px;
+  border-radius: 15px;
+  background-color: #000000;
+  display: flex;
+}
+
+.imgCover {
+  width: 169px;
+  height: 169px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgb(32, 114, 186);
+  border-radius: 15px 0 0 15px;
+}
+
+.nameAndYm {
+  display: flex;
+  width: 306px;
+  height: 22px;
+  margin: 17.8px 0 0 32.9px;
+  justify-content: space-between;
+}
+
+.nameAndYm h1 {
+  color: #fff;
+  font: 700 18px Inter;
+}
+
+.yandex {
+  background-image: url(./assets/yandexMusic.svg);
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nameOfSong {
+  color: #696969;
+  font: 400 14px Inter;
+  margin: 4.6px 0 0 32.9px;
+}
+
+.timeAndTameline {
+  display: flex;
+  margin: 19.3px 0 0 32.9px;
+}
+
+.tameline {
+  width: 257px;
+  height: 3px;
+  margin: 6px 16.5px 0 0;
+  background-color: #DADADA;
+}
+
+.stripe{
+  width: 150px;
+  height: 3px;
+  background-color: #B45353;
+}
+
+.time{
+  color: #C1C1C1;
+  font: 400 12px Inter;
+}
+
+.buttons{
+  display: flex;
+}
+
+.repiat{
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/repeat.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 24px 0 0 32.9px;
+}
