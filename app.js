@@ -66,7 +66,7 @@ play.addEventListener("click", () => {
 });
 
 back.addEventListener("click", () => {
-  if (songIndex == 0) return;
+  if (songIndex == 0) songIndex = 3;
   songIndex--;
   artist.textContent = songs[songIndex].artist;
   nameOfSong.textContent = songs[songIndex].nameSong;
@@ -89,6 +89,16 @@ next.addEventListener("click", () => {
   play.style = "background-image:url(./assets/pause.svg)";
 });
 
+yandex.addEventListener('mouseover',()=>{
+  yandex.style="background-image:url(./assets/yandexColor.svg)";
+  yandex.style.width='23.2px';
+  yandex.style.height='23.2px'
+})
+
+yandex.addEventListener('mouseout',()=>{
+  yandex.style="background-image:url(./assets/yandexMusic.svg)";
+})
+
 yandex.addEventListener("click", () => {
   window.open(songs[songIndex].url);
 });
@@ -96,6 +106,15 @@ yandex.addEventListener("click", () => {
 audio.addEventListener("timeupdate", () => {
   const progress = (audio.currentTime / audio.duration) * 100;
   stripe.style.width = `${progress}%`;
+
+  const timeSong = audio.currentTime;
+
+  const timeSongMin = Math.floor(timeSong / 60);
+  const timeSongMSec = Math.floor(timeSong % 60);
+
+  const min = timeSongMin < 10 ? `0${timeSongMin}` : `${timeSongMin}`;
+  const sec = timeSongMSec < 10 ? `0${timeSongMSec}` : `${timeSongMSec}`;
+  time.innerHTML = `${min}:${sec}`;
 });
 
 tameline.addEventListener("click", (event) => {
@@ -114,8 +133,29 @@ audio.addEventListener("ended", () => {
   play.style = "background-image:url(./assets/pause.svg)";
 });
 
-repiat.addEventListener('click',()=>{
-    audio.src = songs[songIndex].path;
-    audio.play();
-})
+repiat.addEventListener("click", () => {
+  audio.src = songs[songIndex].path;
+  audio.play();
+  flag = true;
+  play.style = "background-image:url(./assets/pause.svg)";
+  repiat.classList.add("box_animation");
+});
 
+repiat.addEventListener("animationend", () => {
+  repiat.classList.remove("box_animation");
+},false);
+
+let flagLike = false;
+
+like.addEventListener("click", () => {
+  if (flagLike == false) {
+    like.style = "background-image:url(./assets/Icon.svg)";
+    like.style.width='18.9px';
+    like.style.height='15.9px'
+    like.style.margin='29px 0 0 58px'
+    flagLike = true;
+  } else {
+    like.style = "background-image:url(./assets/nolike.png)";
+    flagLike = false;
+  }
+});
