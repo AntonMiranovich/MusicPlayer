@@ -26,7 +26,6 @@ body {
   height: 169px;
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: rgb(32, 114, 186);
   border-radius: 15px 0 0 15px;
 }
 
@@ -38,9 +37,11 @@ body {
   justify-content: space-between;
 }
 
-.nameAndYm h1 {
+.artist {
   color: #fff;
   font: 700 18px Inter;
+  height: 18px;
+
 }
 
 .yandex {
@@ -49,12 +50,14 @@ body {
   height: 22px;
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 
 .nameOfSong {
   color: #696969;
   font: 400 14px Inter;
   margin: 4.6px 0 0 32.9px;
+  height: 14px;
 }
 
 .timeAndTameline {
@@ -66,29 +69,73 @@ body {
   width: 257px;
   height: 3px;
   margin: 6px 16.5px 0 0;
-  background-color: #DADADA;
+  background-color: #dadada;
+  cursor: pointer;
 }
 
-.stripe{
-  width: 150px;
+.stripe {
+  width: 0px;
   height: 3px;
-  background-color: #B45353;
+  background-color: #b45353;
+  cursor: pointer;
 }
 
-.time{
-  color: #C1C1C1;
+.time {
+  color: #c1c1c1;
   font: 400 12px Inter;
 }
 
-.buttons{
+.buttons {
   display: flex;
 }
 
-.repiat{
+.repiat {
   width: 24px;
   height: 24px;
   background-image: url(./assets/repeat.png);
   background-repeat: no-repeat;
   background-size: contain;
   margin: 24px 0 0 32.9px;
+  cursor: pointer;
+}
+
+.back {
+  width: 35.514px;
+  height: 34.29px;
+  background-image: url(./assets/prev.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 18.8px 0 0 54px;
+  cursor: pointer;
+}
+
+.play{
+  width: 38px;
+height: 38px;
+background-image: url(./assets/play.png);
+background-repeat: no-repeat;
+background-size: contain;
+margin: 16.8px 0 0 20px;
+cursor: pointer;
+}
+
+
+.next{
+  width: 35.514px;
+height: 34.29px;
+background-image: url(./assets/next.png);
+background-repeat: no-repeat;
+background-size: contain;
+margin: 18.8px 0 0 20px;
+cursor: pointer;
+}
+
+.like{
+  width: 24px;
+height: 24px;
+background-image: url(./assets/nolike.png);
+background-repeat: no-repeat;
+background-size: contain;
+margin: 24px 0 0 55px;
+cursor: pointer;
 }
